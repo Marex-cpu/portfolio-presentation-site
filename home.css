@@ -1,9 +1,27 @@
-main {
-  display: flex;
-  flex-direction: column;
-  max-width: 1100px;
-  padding: 0 2rem;
-  margin: 0 auto;
+section > h4 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 1.6rem;
+}
+
+section > h2 {
+  position: relative;
+  text-align: center;
+  font-weight: 700;
+  margin-top: 2rem;
+  font-size: 4rem;
+}
+section > h2::after {
+  content: "";
+  width: 2px;
+  height: 50px;
+  background-color: var(--backgound-clr-s);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 60px;
 }
 
 /* HEADER SECTION */
@@ -21,6 +39,7 @@ main {
 
 .header-links {
   display: flex;
+  align-items: center;
   gap: 2.5rem;
 }
 
@@ -33,6 +52,22 @@ main {
   color: var(--clr-secondary);
 }
 
+.resume-btn {
+  color: var(--clr-secondary);
+  background-color: transparent;
+  border: 1px solid var(--clr-secondary);
+  border-radius: 5px;
+  padding: 0.75rem 1rem;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-size: 2rem;
+}
+.resume-btn:hover,
+.resume-btn:active {
+  color: #4dc7ff;
+}
 /* HOME WELCOME SECTION */
 .home-welcome-section {
   min-height: calc(100vh - 10rem);
@@ -49,7 +84,7 @@ main {
 }
 
 .home-title {
-  font-size: clamp(50px, 8vw, 80px);
+  font-size: clamp(40px, 8vw, 80px);
   font-weight: 700;
   align-self: flex-start;
   margin-left: -6px;
@@ -72,7 +107,6 @@ main {
 
 .home-role {
   font-size: clamp(14px, 2vw, 18px);
-  font-weight: 300;
   margin-bottom: 30px;
 }
 
@@ -127,6 +161,250 @@ main {
   filter: brightness(0.8);
 }
 
+/* BIOGRAPHY SECTION */
+.biography-section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15rem;
+}
+
+.biography-about-me {
+  margin-top: 9rem;
+  text-align: left;
+}
+
+.biography-about-me-small-title {
+  color: var(--clr-secondary);
+  font-size: clamp(16px, 3vw, 18px);
+}
+
+.biography-about-me-large-title {
+  color: var(--clr-primary);
+  font-size: clamp(18px, 15vw, 30px);
+  margin: 1rem 0;
+}
+
+.biography-about-me-text {
+  font-size: clamp(14px, 3vw, 16px);
+  line-height: 150%;
+}
+
+.biography-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: 30px 0;
+}
+
+.bio-btn {
+  width: 49%;
+  background-color: var(--clr-neutral);
+  padding: 15px 20px;
+  position: relative;
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+}
+
+.bio-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background-color: var(--backgound-clr-s);
+  display: block;
+  transition: all 0.3s ease-in-out;
+}
+.bio-btn:hover::before {
+  width: 100%;
+}
+
+.contact-card-name {
+  color: #fff;
+  font-size: 18px;
+  position: relative;
+  z-index: 1;
+  font-weight: 700;
+  transition: all 0.3s ease-in-out;
+}
+
+.bio-btn:hover .contact-card-name {
+  color: var(--backgound-clr-p);
+}
+
+.contact-card-value {
+  color: #fff;
+  opacity: 0.6;
+  margin-top: 5px;
+  font-size: 14px;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+/* SKILLS SECTION */
+.skills-section {
+  margin-top: 15rem;
+}
+
+.skills-container {
+  margin-top: 9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-name {
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.skill-percent {
+  margin-top: 0.2rem;
+  position: relative;
+  width: 100%;
+  height: 1.8rem;
+  border-radius: 9px;
+  background-color: var(--clr-neutral);
+  margin-bottom: 2.5rem;
+}
+.skill-percent:hover::before {
+  background-color: #4dc7ff;
+}
+.skill-percent::before {
+  content: "95%";
+  font-size: 14px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 95%;
+  height: 1.8rem;
+  background-color: var(--backgound-clr-s);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  transition: all 0.3s;
+}
+.skill-percent.two::before {
+  content: "90%";
+  width: 90%;
+}
+.skill-percent.three::before {
+  content: "70%";
+  width: 70%;
+}
+.skill-percent.four::before {
+  content: "65%";
+  width: 65%;
+}
+.skill-percent.five::before {
+  content: "40%";
+  width: 40%;
+}
+
+/* SERVICES SECTION */
+.services-section {
+  margin: 15rem 0;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 9rem;
+  gap: 20px;
+}
+
+.services-item {
+  padding: 2.5rem 3rem;
+  max-height: 320px;
+  background: var(--clr-neutral);
+  transition: all 0.3s ease;
+  border: 2px solid var(--backgound-clr-p);
+  border-radius: 10px;
+  cursor: default;
+}
+.services-item:hover {
+  border: 2px solid var(--clr-secondary);
+}
+
+.services-item img {
+  width: 50px;
+}
+.services-item .services-title {
+  position: relative;
+  margin-top: 3rem;
+  font-size: 1.8rem;
+  font-weight: 800;
+  z-index: 1;
+}
+.services-item .services-title::after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: -13px;
+  left: 0;
+  width: 50%;
+  height: 2px;
+  background-color: var(--backgound-clr-s);
+}
+.services-item .services-info {
+  position: relative;
+  line-height: 150%;
+  margin-top: 2.5rem;
+  color: #fff;
+  opacity: 0.6;
+  font-size: 16px;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+  font-weight: 300;
+}
+
+/* FOOTER SECTION */
+footer {
+  width: 100%;
+  /* border: 1px solid red; */
+  background: transparent;
+  margin-top: 15rem;
+  padding-bottom: 1.5rem;
+}
+
+.social-media-links-container {
+  width: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social-media-links-container a {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin-inline: 2rem;
+  transition: transform 0.3s ease-in;
+}
+.social-media-links-container a:hover {
+  transform: scale(1.2);
+}
+
+.social-media-links-container a img {
+  width: 100%;
+  height: 100%;
+}
+
+.social-media-links-container a:hover img {
+  fill: var(--clr-secondary);
+}
 /* RESPONSIVE */
 @media screen and (max-width: 940px) {
   /* HOME WELCOME SECTION */
@@ -155,5 +433,76 @@ main {
     justify-content: flex-start;
     width: 500px;
     margin: 10px auto 0;
+  }
+}
+
+@media screen and (max-width: 525px) {
+  /* HEADER SECTION */
+  .header {
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 0;
+    margin-bottom: 15rem;
+  }
+
+  .header-name {
+    font-family: var(--ff-secondary);
+    font-size: 2.4rem;
+  }
+
+  .header-links {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  .header-link {
+    font-size: 2rem;
+    font-weight: 500;
+    transition: color 300ms;
+  }
+  .header-link:hover {
+    color: var(--clr-secondary);
+  }
+
+  .resume-btn {
+    color: var(--clr-secondary);
+    background-color: transparent;
+    border: 1px solid var(--clr-secondary);
+    border-radius: 5px;
+    padding: 0.75rem 1rem;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-size: 2rem;
+  }
+  .resume-btn:hover,
+  .resume-btn:active {
+    color: #4dc7ff;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section > h2 {
+    font-size: 3.5rem;
+  }
+
+  /* BIOGRAPHY SECTION */
+  .bio-btn {
+    width: 100%;
+  }
+
+  /* FOOTER SECTION */
+  footer {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  section > h2 {
+    font-size: 3.2rem;
   }
 }

@@ -16,9 +16,10 @@
 :root {
   --backgound-clr-p: #101010;
   --backgound-clr-s: #4db5ff;
-
+  --dark-slate: #495670;
   --clr-primary: #fff;
   --clr-secondary: #4db5ff;
+  --clr-neutral: hsla(0, 0%, 100%, 0.05);
 
   --ff-primary: "Nunito", sans-serif;
   --ff-secondary: "Parisienne", cursive;
@@ -33,11 +34,33 @@ html {
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--dark-slate);
+  border: 3px solid var(--backgound-clr-p);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--backgound-clr-p);
+}
+
 body {
   font-size: 1.8rem;
   font-family: var(--ff-primary);
   color: var(--clr-primary);
   background: var(--backgound-clr-p);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  max-width: 1100px;
+  padding: 0 2rem;
+  margin: 0 auto;
 }
 
 h1,

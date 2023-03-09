@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     "JavaScript Developer.",
     "Web Developer.",
     "Front-end Developer.",
-    "Dobrodošli, upoznajte me bolje!",
+    "Welcome, get to know me better!",
   ];
 
   // type one text in the typwriter
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       }, 10000);
     }
     // check if dataText[i] exists
-    if (i < dataText[i].length) {
+    if (i < dataText.length) {
       // text exists! start typewriter animation
       typeWriter(dataText[i], 0, function () {
         // after callback (and whole text has been animated), start next text
