@@ -25,43 +25,40 @@
       <div class="project">
         <div class="wrapper-about-project">
           <section class="about-project">
-            <h3 class="title">About project boxbox</h3>
+            <h3 class="title">About project: boxbox</h3>
             <div class="tabs-container">
               <div class="tab">
                 <button
                   id="defaultOpen"
-                  class="tablink"
+                  class="tablink tablink_0"
                   onclick="openTab(event, 'briefly_0', 0)"
                 >
                   Briefly
                 </button>
                 <button
-                  id="defaultOpen"
-                  class="tablink"
+                  class="tablink tablink_0"
                   onclick="openTab(event, 'what_0', 1)"
                 >
                   What I learned
                 </button>
                 <button
-                  id="defaultOpen"
-                  class="tablink"
+                  class="tablink tablink_0"
                   onclick="openTab(event, 'links_0', 2)"
                 >
                   Links
                 </button>
-                <div id="slider" class="slider"></div>
               </div>
               <div class="tabcontent">
                 <h4 class="project-name">Project name: <span>boxbox</span></h4>
                 <span class="date">End Project | January 2023</span>
-                <ul id="briefly_0" class="tabcontent-data">
+                <ul id="briefly_0" class="tabcontent-data tabcontent-data_0">
                   <li>
                     A project that I designed myself from scratch ( it belongs
                     to that: logo, page layout, colors, fonts, logic )
                   </li>
                   <li>It is a multilingual site with 4 pages.</li>
                 </ul>
-                <ul id="what_0" class="tabcontent-data">
+                <ul id="what_0" class="tabcontent-data tabcontent-data_0">
                   <li>
                     For the first time I faced the need to create a multilingual
                     site, it was challenging to come up with logic that would
@@ -74,7 +71,7 @@
                   </li>
                   <li>It also improved my JS skills.</li>
                 </ul>
-                <ul id="links_0" class="tabcontent-data">
+                <ul id="links_0" class="tabcontent-data tabcontent-data_0">
                   <li>
                     See how the site looks live by following this
                     <a href="https://www.boxbox.rs/" target="_blank">link</a>.
@@ -104,8 +101,102 @@
           </figure>
         </div>
       </div>
-      <div class="project two"></div>
-      <div class="project three"></div>
+
+      <!-- individual project -->
+      <div class="project two">
+        <div class="wrapper-about-project">
+          <section class="about-project">
+            <h3 class="title">About project: KIRI shop</h3>
+            <div class="tabs-container">
+              <div class="tab">
+                <button
+                  id="defaultOpen_1"
+                  class="tablink tablink_1"
+                  onclick="openTab_1(event, 'briefly_1', 0)"
+                >
+                  Briefly
+                </button>
+                <button
+                  class="tablink tablink_1"
+                  onclick="openTab_1(event, 'what_1', 1)"
+                >
+                  What I learned
+                </button>
+                <button
+                  class="tablink tablink_1"
+                  onclick="openTab_1(event, 'links_1', 2)"
+                >
+                  Links
+                </button>
+              </div>
+              <div class="tabcontent">
+                <h4 class="project-name">
+                  Project name: <span>KIRI shop</span>
+                </h4>
+                <span class="date">Near the end | March 2023</span>
+                <ul id="briefly_1" class="tabcontent-data tabcontent-data_1">
+                  <li>A shop designed according to the client's design.</li>
+                  <li>Multi-page site, with more demanding logic.</li>
+                </ul>
+                <ul id="what_1" class="tabcontent-data tabcontent-data_1">
+                  <li>
+                    Working on this project meant a lot to me in every field.
+                  </li>
+                  <li>
+                    It was necessary to write the logic for adding and removing
+                    products to the cart so that it was synchronized on each
+                    page. Then everything in the basket had to be calculated and
+                    allow for price correction when adding and reducing the
+                    amount of products. And at the very end, do a brief review
+                    of the order as well as the form that will be sent to the
+                    mail.
+                  </li>
+                  <li>
+                    This project helped me understand the basic and slightly
+                    more complicated principles of JS even better.
+                  </li>
+                </ul>
+                <ul id="links_1" class="tabcontent-data tabcontent-data_1">
+                  <li>
+                    See how the site looks live by following this
+                    <a
+                      href="https://kiridemosite.netlify.app/index.html"
+                      target="_blank"
+                      >link</a
+                    >.
+                  </li>
+                  <li>
+                    Check out my GitHub, and see what the code itself looks
+                    like:
+                    <a
+                      href="https://github.com/Marex-cpu/kiri_site"
+                      target="_blank"
+                      >link</a
+                    >.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <figure class="project-image">
+            <img
+              src="assets/project-image-two.webp"
+              alt="project image KIRI shop site"
+              class="image"
+            />
+            <a
+              href="https://kiridemosite.netlify.app/index.html"
+              target="_blank"
+              class="link-icon"
+            >
+              <img src="assets/link-svgrepo-com (1).svg" alt="link icon" />
+            </a>
+          </figure>
+        </div>
+      </div>
+
+      <!-- individual project -->
+      <!-- <div class="project three"></div> -->
     </main>
 
     <!-- JS -->

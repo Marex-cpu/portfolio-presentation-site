@@ -93,18 +93,8 @@
 }
 .tab .tablink.active {
   color: var(--clr-secondary);
-}
-.tab .slider {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  z-index: 10;
-  width: 2px;
-  height: 42px;
-  border-radius: 4px;
-  background: var(--clr-secondary);
-  transform: translateY(calc(0 * 42px));
-  transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+  border-left: 2px solid var(--clr-secondary);
+  transition: all 0.1s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
 }
 
 .tabcontent .project-name {
@@ -170,7 +160,6 @@
   height: 100%;
   opacity: 0;
   visibility: hidden;
-  filter: blur();
   transition: all 300ms ease-out;
   background-color: var(--clr-secondary);
   cursor: pointer;
@@ -192,10 +181,10 @@
   visibility: visible;
 }
 
-.project.two {
+/* .project.two {
   height: 100vh;
   background: red;
-}
+} */
 
 .project.three {
   height: 100vh;
@@ -225,15 +214,10 @@
     padding: 2rem 2rem 0;
   }
 
-  .project {
-    padding: 1rem 0;
-  }
-
   .wrapper-about-project {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    gap: 15px;
   }
 
   .about-project .title {
@@ -251,7 +235,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    gap: 40px;
   }
 
   .about-project {
@@ -263,7 +246,8 @@
   }
 
   .project-image {
-    max-width: 800px;
+    max-width: 600px;
+    margin-top: 1rem;
   }
 }
 
@@ -272,7 +256,7 @@
   .tabs-container {
     flex-direction: column;
     gap: 20px;
-    min-height: 300px;
+    min-height: 280px;
   }
 
   .tabs-container .tab {
@@ -287,18 +271,14 @@
     border-bottom: 2px solid var(--slate);
   }
 
-  .tab .slider {
-    position: absolute;
-    left: 0px;
-    bottom: 0;
-    top: auto;
-    width: 100%;
-    max-width: 150px;
-    z-index: 10;
-    height: 2px;
-    border-radius: var(--border-radius);
-    background: var(--clr-secondary);
-    transform: translateX(calc(0 * 150px));
-    transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+  .tab .tablink.active {
+    color: var(--clr-secondary);
+    border-bottom: 2px solid var(--clr-secondary);
+    border-left: none;
+    z-index: 12;
+  }
+
+  .project-image {
+    max-width: 400px;
   }
 }
