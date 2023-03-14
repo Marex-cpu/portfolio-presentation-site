@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- title -->
+    <title>Marko Petrovic | Portfolio</title>
+    <!-- favicon -->
+    <link rel="icon" href="assets/favicon.ico" />
+    <!-- styles -->
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="portfolio.css" />
+  </head>
+  <body>
+    <!-- header section -->
+    <header class="header">
+      <a href="home.html" class="header-name">Marko Petrović</a>
+      <a href="home.html" class="header-link"> Home</a>
+    </header>
+    <!-- end of header section -->
+
+    <main id="projects-container">
+      <!-- individual project -->
+      <div class="project">
+        <div class="wrapper-about-project">
+          <section class="about-project">
+            <h3 class="title">About project boxbox</h3>
+            <div class="tabs-container">
+              <div class="tab">
+                <button
+                  id="defaultOpen"
+                  class="tablink"
+                  onclick="openTab(event, 'briefly_0', 0)"
+                >
+                  Briefly
+                </button>
+                <button
+                  id="defaultOpen"
+                  class="tablink"
+                  onclick="openTab(event, 'what_0', 1)"
+                >
+                  What I learned
+                </button>
+                <button
+                  id="defaultOpen"
+                  class="tablink"
+                  onclick="openTab(event, 'links_0', 2)"
+                >
+                  Links
+                </button>
+                <div id="slider" class="slider"></div>
+              </div>
+              <div class="tabcontent">
+                <h4 class="project-name">Project name: <span>boxbox</span></h4>
+                <span class="date">End Project | January 2023</span>
+                <ul id="briefly_0" class="tabcontent-data">
+                  <li>
+                    A project that I designed myself from scratch ( it belongs
+                    to that: logo, page layout, colors, fonts, logic )
+                  </li>
+                  <li>It is a multilingual site with 4 pages.</li>
+                </ul>
+                <ul id="what_0" class="tabcontent-data">
+                  <li>
+                    For the first time I faced the need to create a multilingual
+                    site, it was challenging to come up with logic that would
+                    allow visitors to switch from one language to another.
+                  </li>
+                  <li>
+                    Because I designed everything myself, I learned to use
+                    various tools that help create harmony in colors, fonts,
+                    etc.
+                  </li>
+                  <li>It also improved my JS skills.</li>
+                </ul>
+                <ul id="links_0" class="tabcontent-data">
+                  <li>
+                    See how the site looks live by following this
+                    <a href="https://www.boxbox.rs/" target="_blank">link</a>.
+                  </li>
+                  <li>
+                    Check out my GitHub, and see what the code itself looks
+                    like:
+                    <a
+                      href="https://github.com/Marex-cpu/boxbox-self-storage"
+                      target="_blank"
+                      >link</a
+                    >.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <figure class="project-image">
+            <img
+              src="assets/project-image-one.webp"
+              alt="project image boxbox.rs site"
+              class="image"
+            />
+            <a href="https://www.boxbox.rs/" target="_blank" class="link-icon">
+              <img src="assets/link-svgrepo-com (1).svg" alt="link icon" />
+            </a>
+          </figure>
+        </div>
+      </div>
+      <div class="project two"></div>
+      <div class="project three"></div>
+    </main>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+  </body>
+</html>
