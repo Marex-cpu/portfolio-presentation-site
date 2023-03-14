@@ -34,6 +34,10 @@
 }
 
 /* INDIVIDUAL PROJECT */
+.project {
+  margin-bottom: 5rem;
+}
+
 .wrapper-about-project {
   /* border: 1px solid red; */
   min-height: 100vh;
