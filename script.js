@@ -47,3 +47,51 @@ const openTab_1 = (evt, uniqueId) => {
 
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen_1").click();
+
+//SELECT ITEMS FOR TAB 3 - PROJECT 3
+const tabcontentData_2 = document.getElementsByClassName("tabcontent-data_2");
+const tabLinks_2 = document.getElementsByClassName("tablink_2");
+
+const openTab_2 = (evt, uniqueId) => {
+  const mediaQ = window.matchMedia("(max-width: 768px)");
+  let i;
+
+  for (i = 0; i < tabcontentData_2.length; i++) {
+    tabcontentData_2[i].style.display = "none";
+  }
+
+  for (i = 0; i < tabLinks_2.length; i++) {
+    tabLinks_2[i].className = tabLinks_2[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the link that opened the tab
+  document.getElementById(uniqueId).style.display = "block";
+  evt.currentTarget.className += " active";
+};
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen_2").click();
+
+//SELECT ITEMS FOR TAB 4 - PROJECT 4
+const tabcontentData_3 = document.getElementsByClassName("tabcontent-data_3");
+const tabLinks_3 = document.getElementsByClassName("tablink_3");
+
+const openTab_3 = (evt, uniqueId) => {
+  const mediaQ = window.matchMedia("(max-width: 768px)");
+  let i;
+
+  for (i = 0; i < tabcontentData_3.length; i++) {
+    tabcontentData_3[i].style.display = "none";
+  }
+
+  for (i = 0; i < tabLinks_3.length; i++) {
+    tabLinks_3[i].className = tabLinks_3[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the link that opened the tab
+  document.getElementById(uniqueId).style.display = "block";
+  evt.currentTarget.className += " active";
+};
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen_3").click();
