@@ -292,6 +292,10 @@
 
 /* tablets */
 @media screen and (max-width: 768px) {
+  .about-project .title {
+    font-size: 2.6rem;
+  }
+
   .tabs-container {
     flex-direction: column;
     gap: 20px;
