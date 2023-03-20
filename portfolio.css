@@ -173,6 +173,7 @@
   position: relative;
   max-width: 45%;
   margin-right: 170px;
+  cursor: pointer;
 }
 
 .project-image .image {
@@ -180,50 +181,17 @@
   height: 100%;
   object-fit: cover;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transform: perspective(900px) rotateX(60deg) scale(0.7);
+  /* box-shadow: 0px 0px 12px var(--light-slate); */
+  transition: 0.5s ease all;
+  opacity: 0.5;
+  filter: blur(2px);
+}
+
+.project-image:hover .image {
+  transform: rotate(0deg) scale(1) translateY(10px);
   opacity: 1;
-  z-index: 0;
-  backface-visibility: hidden;
-}
-
-.project-image .link-icon {
-  position: absolute;
-  top: 8px;
-  left: 8px;
-  right: 8px;
-  bottom: 8px;
-  width: 100%;
-  height: 100%;
-  border: 3px solid var(--light-slate);
-  transition: all 300ms ease-out;
-  cursor: pointer;
-}
-
-.link-icon img {
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: clamp(40px, 8vw, 80px);
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-.project-image:hover .link-icon {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0.8;
-  border: none;
-  background: var(--clr-secondary);
-}
-
-.project-image:hover .link-icon img {
-  opacity: 1;
-  visibility: visible;
+  filter: blur(0);
 }
 
 /* RESPONSIVE */
