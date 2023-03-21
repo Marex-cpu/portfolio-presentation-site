@@ -300,6 +300,9 @@ section > h2::after {
 .skill-percent .skill-per.javascript {
   width: 65%;
 }
+.skill-percent .skill-per.ajax {
+  width: 45%;
+}
 .skill-percent .skill-per.jQuery {
   width: 55%;
 }
