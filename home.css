@@ -406,7 +406,6 @@ section > h2::after {
 /* FOOTER SECTION */
 footer {
   width: 100%;
-  /* border: 1px solid red; */
   background: transparent;
   margin-top: 15rem;
   padding-bottom: 1.5rem;
@@ -436,6 +435,40 @@ footer {
 
 .social-media-links-container a:hover img {
   fill: var(--clr-secondary);
+}
+
+/* button go to top */
+#btn-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: rgba(77, 199, 255, 0.9);
+  color: white;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  transform: scale(0);
+}
+#btn-to-top.show {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 0.5s ease-in-out;
+}
+
+#btn-to-top:hover {
+  background-color: rgba(77, 199, 255, 1);
+}
+
+#btn-to-top img {
+  width: 36px;
 }
 /* RESPONSIVE */
 @media screen and (max-width: 940px) {

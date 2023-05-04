@@ -168,6 +168,15 @@
 .tabcontent-data li:last-child {
   margin-bottom: 0;
 }
+.tabcontent-data .workedUsing {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+.tabcontent-data .workedUsing img {
+  width: 50px;
+  object-fit: fill;
+}
 
 .project-image {
   position: relative;
@@ -192,6 +201,22 @@
   transform: rotate(0deg) scale(1) translateY(10px);
   opacity: 1;
   filter: blur(0);
+}
+
+#projects-container .box_box {
+  order: 3;
+}
+#projects-container .kiri_shop {
+  order: 2;
+}
+#projects-container .bank_modern {
+  order: 4;
+}
+#projects-container .vanila_projects {
+  order: 4;
+}
+#projects-container .social_network {
+  order: 1;
 }
 
 /* RESPONSIVE */
@@ -243,12 +268,11 @@
     transform: rotate(0deg) scale(1) translateY(10px);
     transition: 0.5s ease all;
     opacity: 0.5;
-    filter: blur(1px);
+    filter: blur(0);
   }
 
   .project-image:hover .image {
     opacity: 1;
-    filter: blur(0);
   }
 }
 
@@ -272,6 +296,9 @@
     max-width: 600px;
     margin-top: 1rem;
   }
+  .project-image .image {
+    filter: blur(0);
+  }
 }
 
 /* tablets */
@@ -289,6 +316,7 @@
   .tabs-container .tab {
     width: 100%;
     overflow-x: scroll;
+    overflow-x: visible !important;
     overflow-y: hidden;
     flex-direction: row;
   }

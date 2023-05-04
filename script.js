@@ -95,3 +95,27 @@ const openTab_3 = (evt, uniqueId) => {
 
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen_3").click();
+
+//SELECT ITEMS FOR TAB 5 - PROJECT 5
+const tabcontentData_4 = document.getElementsByClassName("tabcontent-data_4");
+const tabLinks_4 = document.getElementsByClassName("tablink_4");
+
+const openTab_4 = (evt, uniqueId) => {
+  const mediaQ = window.matchMedia("(max-width: 768px)");
+  let i;
+
+  for (i = 0; i < tabcontentData_4.length; i++) {
+    tabcontentData_4[i].style.display = "none";
+  }
+
+  for (i = 0; i < tabLinks_4.length; i++) {
+    tabLinks_4[i].className = tabLinks_4[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the link that opened the tab
+  document.getElementById(uniqueId).style.display = "block";
+  evt.currentTarget.className += " active";
+};
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen_4").click();
